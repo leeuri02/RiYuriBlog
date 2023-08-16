@@ -1,0 +1,76 @@
+ul,li,h1{
+    margin: 0;
+    padding: 0;
+}
+h1,h2{
+    font-family: serif;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover, .active{
+    text-decoration: underline;
+}
+nav{
+    color:black;
+}
+#footer{
+    clear: both;
+    padding: 50px 10px 50px 0;
+    text-align: center;
+    font-size: 10px;
+}
+
+#blog{
+    width: 100%; 
+}
+#main{
+    width: 80%;
+    margin-top: 20px;
+}
+#blogmenu{
+    width: 12%;
+    position: fixed;
+    top: 0;
+    right: 4%;
+    background: white;
+    padding-top: 40px;
+}
+.blogbar{
+    display: block !important;
+}
+li{
+    font-size: 12px;
+    padding: 10px 0;
+
+}
+#blog-contents{
+    display: flex;
+    justify-content:left;
+    padding-left: 50px;
+}
+
+/*ボタンのデザイン*/
+.buttons{
+    text-align:left;
+    font-size: 14px;
+}
+.button{
+    display: inline-block;
+    border-style: solid;
+    width: 100px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    color: #323232;
+    text-align: center;
+}
+form{
+    padding-left: 40%;
+    padding-top: 20%;
+    font-size: 12px;
+}

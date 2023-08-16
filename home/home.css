@@ -1,0 +1,66 @@
+body,div,ul,li,h1{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-family: serif;
+}
+ul{
+    list-style: none;
+}
+img{
+    border: 0;
+    max-width: 100%;
+    height: auto;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover, .active{
+    text-decoration: underline;
+}
+nav{
+    color:black;
+}
+
+
+#home{
+    width: 100%;   
+}
+#content{
+    width: 80%;
+}
+#menu{
+    width: 12%;
+    position: fixed;
+    top: 0;
+    right: 4%;
+    background: white;
+}
+
+li{
+    font-size: 12px;
+    padding: 10px 0;
+
+}
+#sns{
+    margin-top: 50px;
+}
+#sns li{
+    display: inline-block;
+    padding-right: 10px;
+}
+#sns a:hover img{
+    opacity: .8;;
+}
+
+.blogging{
+    width: 80%;
+    margin: 1rem auto;
+}
+#footer{
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 10px;
+}
