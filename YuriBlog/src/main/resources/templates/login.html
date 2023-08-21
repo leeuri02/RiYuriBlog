@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+<body>
+    <div class="loginpage">
+        <form th:action="@{/login/process}" method="post">
+            <h1>Welcome</h1>
+            <input type="text" placeholder="username" name="username" required>
+            <input type="password" placeholder="password" name="password" required>
+            <input type="submit" id="login" value="LOGIN">
+            <p class="message">Not registered? <a th:href="@{/register}">Create an account</a></p>
+          </form>
+    </div>
+   
+    
+</body>
+</html>

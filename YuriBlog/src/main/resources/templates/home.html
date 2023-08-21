@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenny's </title>
+    <link rel="stylesheet" th:href="@{/css/home.css}">
+</head>
+<body>
+    <div id="home">
+		<form action="@{/home}" method="post">
+        <div id="menu">
+            
+            <h1>hello</h1>
+            <nav>
+                <div class="bar">
+                    <ul>
+                        <li><a th:href="@{/home}">TOP</a></li>
+                        <li><a th:href="@{/blog/list}">BLOG</a></li>
+                        <li><a th:href="@{/message}">MESSAGE</a></li>
+                        <li th:text="${username}"></li>
+                        <li><a href="logout">LOGOUT</a></li>
+                    </ul>
+                    <div id="sbo">
+                        <form id="form1" action="http://localhost:8080/" method="get">
+                        <input id="keyword" type="text" placeholder="キーワード" />
+                        <input id="search" type="submit" value="検索" /></form>
+                    </div>
+                    <ul id="sns">
+                        <li><a href="" target="_blank"><img th:src="@{/image/instagram.png}" width="20" height="20" alt="Instagram"></a></li>
+                        <li><a href="" target="_blank"><img th:src="@{/image/youtube.png}" width="20" height="20" alt="You Tube"></a></li>
+                    </ul>
+                    <ul></ul>
+                </div>
+            </nav>
+        </div >
+
+        <div id="content">
+            <p id="mainimage"><img th:src="@{/image/mainimage.jpg}" alt=""></p>
+        </div>
+
+        
+
+        <footer id="footer">
+            Design by Jenny 2023.8.
+        </footer>
+        </form>
+    </div>
+    
+</body>
+</html>

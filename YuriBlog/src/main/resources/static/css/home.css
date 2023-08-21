@@ -1,0 +1,93 @@
+body,div,ul,li,h1{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-family: serif;
+}
+ul{
+    list-style: none;
+}
+img{
+    border: 0;
+    max-width: 100%;
+    height: auto;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover, .active{
+    text-decoration: underline;
+}
+nav{
+    color:black;
+}
+
+
+#home{
+    width: 100%;   
+}
+#content{
+    width: 80%;
+}
+#menu{
+    width: 12%;
+    position: fixed;
+    top: 100px;
+    right: 4%;
+    background: white;
+}
+
+li{
+    font-size: 12px;
+    padding: 10px 0;
+
+}
+#sns{
+    margin-top: 50px;
+}
+#sns li{
+    display: inline-block;
+    padding-right: 10px;
+}
+#sns a:hover img{
+    opacity: .8;
+}
+
+.blogging{
+    width: 80%;
+    margin: 1rem auto;
+}
+#footer{
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 10px;
+}
+#input{
+    display: inline-block;
+}
+
+/*検索ボックス*/
+#keyword{	
+outline:0;/*クリック時の青い枠線消す*/	
+height: 20px;/*検索ボックスの高さ*/	
+width: 80px;	 
+border-radius: 3px;/*検索ボックスの角を丸める*/		
+background:white;/*検索ボックスの背景カラー*/		
+}
+/*検索ボタン*/
+#search{
+width: 40px;/*検索ボタンの横幅*/ 
+height: 25px;/*検索ボタンの縦幅*/ 
+border-radius: 3px;/*検索ボタンの角を丸める*/ 
+background:#2e2e2e;/*検索ボタンの背景カラー*/ 
+border:none;/*検索ボタンの枠線を消す*/ 
+color:#fff;/*検索ボタンのテキストカラー*/ 
+font-size:11px;/*検索ボタンのフォントサイズ*/ 
+text-align: center;
+}
+/*検索ボタンマウスオーバー時*/
+#search:hover{
+color:#cdcdcd;/*検索ボタンマウスオーバー時のフォントカラー*/ 
+}

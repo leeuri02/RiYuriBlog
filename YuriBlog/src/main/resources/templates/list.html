@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOG</title>
+    <link rel="stylesheet" th:href="@{/css/list.css}">
+</head>
+
+<body>
+    <div id="blog">
+        <div th:action="@{/blog/list}" method="post"id="blog-contents" >
+            <div id="blogmenu">
+                <h1>BLOG</h1>
+                <nav>
+                    <div class="blogbar">
+                        <ul>
+                            <li><a th:href="@{/home}">TOP</a></li>
+                            <li><a th:href="@{/blog/list}">BLOG</a></li>
+                            <li><a th:href="@{/message}">MESSAGE</a></li>
+                            <li th:text="${username}"></li>
+                            <li><a href="logout">LOGOUT</a></li>
+                        
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <div id="main">
+                <div id="main-header">
+
+                    <div class="buttons">
+                        <a class="button" th:href="@{/blog/list}">LIST</a>
+                        <a class="button" th:href="@{/blog/register}">作成</a>
+                    </div>
+                </div>
+                <div>
+					
+                    <h2>BLOG LIST</h2>
+                    </section>
+                    <div class="container" href="">
+                        <div class="card-media" th:each="blogList:${blogList}">
+                            <!-- media container -->
+                            <div class="card-media-container">
+                                <div class="card-media-object">
+                                    <img th:src="@{/image/{imagePath}(imagePath=${blogList.image})}" alt="">
+                                </div>
+                            </div>
+                            <!-- body container -->
+                            <div class="card-media-body"><a
+                                  th:href="@{/blog/edit/{blogId}(blogId=${blogList.blogId})}">
+                                  <div class="card-media-body-top">
+                                      <span class="card-date" th:text="${blogList.date}"></span>
+                                  </div>
+                                  <span class="card-media-body-heading" th:text="${blogList.title}"></span>
+                                  <span class="card-media-body-contents" th:text="${blogList.contents}"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+       
+    </div>
+
+</body>
+
+</html>

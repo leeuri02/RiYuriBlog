@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASSAGE</title>
+    <link rel="stylesheet" th:href="@{/css/list.css}">
+</head>
+
+<body>
+    <div th:action="@{/massage}" method="post" id="blog">
+        <div id="blog-contents">
+            <div id="blogmenu">
+                <h1>MESSAGE</h1>
+                <nav>
+                    <div class="blogbar">
+                        <ul>
+                            <li><a th:href="@{/home}">TOP</a></li>
+                            <li><a th:href="@{/blog/list}">BLOG</a></li>
+                            <li><a th:href="@{/message}">MESSAGE</a></li>
+                            <li th:text="${username}"></li>
+                            <li><a href="logout">LOGOUT</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <div id="main">
+                <h2></h2>
+                <div class="message-box">
+                    <a href=""></a>
+                </div>
+                <div class="message-bord">
+                    <input type="text" placeholder="タイトル">
+                    <input type="date" >
+                    <textarea type="post" placeholder="メッセージを書いてください"></textarea>
+                    <button class="register">登録</button>
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+   
+    </div>
+
+</body>
+
+</html>

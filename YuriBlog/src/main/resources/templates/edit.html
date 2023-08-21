@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ブログ修正</title>
+    <link rel="stylesheet" th:href="@{/css/list.css}">
+</head>
+
+<body>
+    <div id="blog">
+            <div id="blogmenu">
+                <h1>BLOG</h1>
+                <nav>
+                    <div class="blogbar">
+                        <ul>
+                            <li><a th:href="@{/home}">TOP</a></li>
+                            <li><a th:href="@{/blog/list}">BLOG</a></li>
+                            <li><a th:href="@{/message}">MESSAGE</a></li>
+                            <li th:text="${username}"></li>
+                            <li><a href="logout">LOGOUT</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                
+            </div>
+
+            <div id="main">
+                <div id="main-header">
+                    
+                     <div class="buttons">
+                        <a class="button" th:href="@{/blog/list}">LIST</a>
+                        <a class="button" th:href="@{/blog/register}">作成</a>
+                     </div>
+                </div>
+                <form th:action="@{/blog/edit/process}" method="post" enctype="multipart/form-data">
+                    <div class="register-section-details">
+                        <div class="register-section-details_flex">
+                            <div>TITLE</div>
+                            <input type="text" name="title" th:value="${blogList.title}">
+                        </div>
+                        <div class="register-section-details_flex">
+                            <div>date</div>
+                            <input type="date" name="date" th:value="${blogList.date}">
+                        </div>
+                        <div class="register-section-details_flex">
+                            <div>画像</div>
+                            <input type="file" name="image">
+                        </div>
+                        <div class="register-section-details_flex">
+                            <div>投稿内容</div>
+                            <textarea name="contents" th:text="${blogList.contents}"></textarea>
+                        </div>
+
+                    </div>
+                    <div class="register-section-details_flex">
+						<div>
+							<input type="hidden" name="blogId" th:value="${blogList.blogId}">
+                            <button class="register">更新</button>
+                            <button class="back-btn" onclick="history.back();" type="button">戻る</button>
+                        </div>　　　　
+                   　</div>
+                </form>
+                <form class="register-section-details_flex" th:action="@{/blog/delete}" method="post">
+						　　 <input type="hidden" name="blogId" th:value="${blogList.blogId}">
+						　　 <button class="register">削除</button>
+			    </form>　　　
+               
+            </div>
+        </div>
+
+
+</body>
+
+</html>
