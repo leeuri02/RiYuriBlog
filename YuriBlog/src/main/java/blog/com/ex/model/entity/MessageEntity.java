@@ -32,6 +32,14 @@ public class MessageEntity {
 		this.date = date;
 		this.message = message;
 	}
+	
+
+	public MessageEntity(Long messageId, String author, String date, String message) {
+		this.messageId = messageId;
+		this.author = author;
+		this.date = date;
+		this.message = message;
+	}
 
 	public Long getMessageId() {
 		return messageId;

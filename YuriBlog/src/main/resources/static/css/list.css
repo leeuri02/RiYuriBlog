@@ -220,11 +220,18 @@ h2{
   display:flex;
   flex-flow: column;
   width: 50%;
-  margin: auto;
+  position: relative;
+  overflow: auto;
 }
-.message-box{
-    border-style: solid;
-    width: 50%;
-    height: 100%;
-    margin:auto;
+.message-box {
+    position: relative;
+    max-width: 80%;
+    margin: 15px auto;
+    border: 1.5px solid rgb(177, 179, 179);
+    border-radius: 5px;
+    overflow: auto;
+}
+.message-box p {
+    margin: 0;
+    padding: 3px 15px;
 }

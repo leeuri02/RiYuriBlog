@@ -126,7 +126,7 @@ public class BlogController {
 		}else {
 			String fileName = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss").format(new Date())+image.getOriginalFilename();
 			try {
-				Files.copy(image.getInputStream(), Path.of("src/main/resources/static/image"+fileName));
+				Files.copy(image.getInputStream(), Path.of("src/main/resources/static/image/"+fileName));
 			}catch(Exception e) {
 				e.printStackTrace();
 			}

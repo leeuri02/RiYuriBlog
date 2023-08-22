@@ -27,17 +27,20 @@
             </div>
 
             <div id="main">
-                <h2></h2>
-                <div class="message-box">
-                    <a href=""></a>
+				<h2></h2>
+				<div class="message-box" th:each="messageList:${messageList}">
+						<p class="author" th:text="${messageList.author}"></p>
+						<p class="date" th:text="${messageList.date}"></p>
+						<p class="message" th:text="${messageList.message}"></p>
                 </div>
-                <div class="message-bord">
-                    <input type="text" placeholder="タイトル">
-                    <input type="date" >
-                    <textarea type="post" placeholder="メッセージを書いてください"></textarea>
-                    <button class="register">登録</button>
-                </div>
-                
+                <div>
+                <a class="message-bord" th:href="@{/message/register/process}" method="post" enctype="multipart/form-data" >
+						<input type="text" name="author" placeholder="作成者">
+                        <input type="date" name="date" >
+                        <textarea type="post" name="message" placeholder="メッセージを書いてください"></textarea>
+						<button class="register">登録</button>  
+                </a>  
+                </div> 
             </div>
 
         </div>

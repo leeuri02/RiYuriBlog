@@ -10,6 +10,7 @@ public interface MessageDao extends JpaRepository<MessageEntity, Long> {
 	
 	MessageEntity save(MessageEntity messageEntity);
 	List<MessageEntity>findAll();
-	MessageEntity findByMessageId(Long MessgeId);
+	MessageEntity findByMessageId(Long MessageId);
+	MessageEntity findByAuthor(String author);
 
 }
