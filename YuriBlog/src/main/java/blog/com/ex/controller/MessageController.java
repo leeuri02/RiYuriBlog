@@ -16,41 +16,35 @@ import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class MessageController {
-	
+
 	@Autowired
 	private MessageService messageService;
 	@Autowired
 	private HttpSession session;
 
-	//blogメッセージ画面表示
+	// メッセージ画面表示
 	@GetMapping("/message")
 	public String getMessage(Model model) {
 		AdminEntity admin = (AdminEntity) session.getAttribute("admin");
-		if(admin == null) {
+		if (admin == null) {
 			return "redirect:/login";
-		}else {
-			model.addAttribute("username",admin.getUsername());
-			List<MessageEntity>messageList = messageService.selectAll();
-			model.addAttribute("messageList",messageList);
+		} else {
+			model.addAttribute("username", admin.getUsername());
+			List<MessageEntity> messageList = messageService.selectAll();
+			model.addAttribute("messageList", messageList);
 			return "message.html";
 		}
-		
 	}
 
-	//メッセージ作成処理
+	// メッセージ作成処理
 	@PostMapping("/message/register/process")
-	public String getMessageRegisterProcess(
-			@RequestParam String author,
-			@RequestParam String date,
-			@RequestParam String message,
-			Model model) {
-		if(messageService.createMessage(author,date,message)) {
+	public String getMessageRegisterProcess(@RequestParam String author, @RequestParam String date,
+			@RequestParam String message, Model model) {
+		if (messageService.createMessage(author, date, message)) {
 			return "redirect:/message";
-		}else {
+		} else {
 			return "redirect:/message";
 		}
-		
+
 	}
 }
-
-

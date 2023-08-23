@@ -1,3 +1,4 @@
+/*共通*/
 ul,li,h1{
     margin: 0;
     padding: 0;
@@ -25,6 +26,8 @@ nav{
 #main{
     width: 80%;
     margin-top: 20px;
+    padding-left: 25px;
+    
 }
 #blogmenu{
     width: 12%;
@@ -45,10 +48,9 @@ li{
 #blog-contents{
     display: flex;
     justify-content:left;
-    padding-left: 50px;
 }
 
-/*ボタンのデザイン*/
+/*リスト・作成ボタンのデザイン*/
 .buttons{
     text-align:left;
     font-size: 14px;
@@ -63,9 +65,9 @@ li{
     color: #323232;
     text-align: center;
 }
+/*左表示画面のデザイン*/
 form{
-    padding-left: 40%;
-    padding-top: 20%;
+
     font-size: 12px;
 }
 
@@ -73,60 +75,7 @@ h2{
     border-bottom: 3px solid #000;
 }
 
-/*----------商品一覧--------------*/
-.blog-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:left;
-}
 
-.log-list li {
-    width: 33%;
-    margin: 0.5rem;
-    border: 1px solid #594A4E;
-}
-
-.log-list li a img {
-    padding: 0.5rem;
-    box-sizing: border-box;
-}
-
-.log-list li a p {
-    text-align: center;
-    color: #161616;
-    font-weight: bold;
-    padding: 1rem 0;
-    font-size: 1.2rem;
-}
-
-/*----------------商品一覧---------------------*/
-.log-list-table {
-    width: 100%;
-    margin: 1rem auto;
-    text-align: center;
-    border-top: 1px solid #594A4E;
-}
-.log-list-table tr{
-    border: 1px solid #594A4E;
-}
-.log-list-table th,.products-table td{
-    border: 1px solid #594A4E;
-    vertical-align:middle;
-    padding:1rem 0.5rem;
-}
-.log-list-table td button{
-    background-color: #EC6015;
-    border:1px solid #594A4E;
-    color: #fff;
-    margin-left: 0.2rem;
-}
-
-.log-list-table img{
-    width:30%;
-}
-.log-list-table input {
-    width: 2rem;
-}
 
 
 /*ブログリスト*/
@@ -216,12 +165,12 @@ h2{
 
 /*メッセージボックス*/
 .message-bord{
-  padding-top: 50px;
   display:flex;
   flex-flow: column;
-  width: 50%;
+  max-width: 80%;
   position: relative;
   overflow: auto;
+  margin: auto;
 }
 .message-box {
     position: relative;
@@ -234,4 +183,12 @@ h2{
 .message-box p {
     margin: 0;
     padding: 3px 15px;
+ }   
+.message-bord-delete{
+  display:flex;
+  flex-flow: column;
+  max-width: 80%;
+  position: relative;
+  overflow: auto;
+  margin: auto;
 }

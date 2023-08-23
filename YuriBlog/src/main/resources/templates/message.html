@@ -33,17 +33,13 @@
 						<p class="date" th:text="${messageList.date}"></p>
 						<p class="message" th:text="${messageList.message}"></p>
                 </div>
-                <div>
-                <a class="message-bord" th:href="@{/message/register/process}" method="post" enctype="multipart/form-data" >
+                <form class="message-bord" th:action="@{/message/register/process}" method="post" >
 						<input type="text" name="author" placeholder="作成者">
                         <input type="date" name="date" >
                         <textarea type="post" name="message" placeholder="メッセージを書いてください"></textarea>
 						<button class="register">登録</button>  
-                </a>  
-                </div> 
-            </div>
-
-        </div>
+                </form> 
+           </div>
     </div>
    
     </div>

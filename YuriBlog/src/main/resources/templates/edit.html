@@ -34,39 +34,31 @@
                         <a class="button" th:href="@{/blog/register}">作成</a>
                      </div>
                 </div>
+                
                 <form th:action="@{/blog/edit/process}" method="post" enctype="multipart/form-data">
-                    <div class="register-section-details">
-                        <div class="register-section-details_flex">
-                            <div>TITLE</div>
+					<div class="message-bord">
+                            <p>TITLE</p>
                             <input type="text" name="title" th:value="${blogList.title}">
-                        </div>
-                        <div class="register-section-details_flex">
-                            <div>date</div>
+                            <p>date</p>
                             <input type="date" name="date" th:value="${blogList.date}">
-                        </div>
-                        <div class="register-section-details_flex">
-                            <div>画像</div>
+                            <p>画像</p>
                             <input type="file" name="image">
-                        </div>
-                        <div class="register-section-details_flex">
-                            <div>投稿内容</div>
+                            <p>投稿内容</p>
                             <textarea name="contents" th:text="${blogList.contents}"></textarea>
-                        </div>
-
                     </div>
-                    <div class="register-section-details_flex">
-						<div>
+                    <div class="message-bord">
 							<input type="hidden" name="blogId" th:value="${blogList.blogId}">
                             <button class="register">更新</button>
-                            <button class="back-btn" onclick="history.back();" type="button">戻る</button>
-                        </div>　　　　
+                            <button class="back-btn" onclick="history.back();" type="button">戻る</button>　　
                    　</div>
                 </form>
-                <form class="register-section-details_flex" th:action="@{/blog/delete}" method="post">
+                <form  th:action="@{/blog/delete}" method="post">
+					<div class="message-bord-delete">
 						　　 <input type="hidden" name="blogId" th:value="${blogList.blogId}">
 						　　 <button class="register">削除</button>
+						</div>
 			    </form>　　　
-               
+               </div>
             </div>
         </div>
 

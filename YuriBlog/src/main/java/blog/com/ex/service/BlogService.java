@@ -7,46 +7,45 @@ import org.springframework.stereotype.Service;
 import blog.com.ex.model.dao.BlogDao;
 import blog.com.ex.model.entity.BlogEntity;
 
-
 @Service
 public class BlogService {
-	
+
 	@Autowired
 	private BlogDao blogDao;
-	
-	public List<BlogEntity> selectAll(Long adminId){
-		if(adminId == null) {
+
+	public List<BlogEntity> selectAll(Long adminId) {
+		if (adminId == null) {
 			return null;
-		}else {
+		} else {
 			return blogDao.findAll();
 		}
 	}
-	
-	
-	public boolean createBlog(String title,String date,String image,String contents) {
+
+	// ブログの作成処理
+	public boolean createBlog(String title, String date, String image, String contents) {
 		BlogEntity blogList = blogDao.findByTitle(title);
-		if(blogList == null) {
-			blogDao.save(new BlogEntity(title,date,image,contents));
+		if (blogList == null) {
+			blogDao.save(new BlogEntity(title, date, image, contents));
 			return true;
-		}else {
+		} else {
 			return false;
 		}
 	}
+
 	public BlogEntity getBlogPost(Long blogId) {
-		if(blogId == null) {
+		if (blogId == null) {
 			return null;
-		}else {
+		} else {
 			return blogDao.findByBlogId(blogId);
 		}
 	}
-	
-	
-	//更新処理
-	public boolean editBlog(Long blogId,String title,String date,String image,String contents) {
+
+	// 更新処理
+	public boolean editBlog(Long blogId, String title, String date, String image, String contents) {
 		BlogEntity blogList = blogDao.findByBlogId(blogId);
-		if(blogList == null) {
+		if (blogList == null) {
 			return false;
-		}else {
+		} else {
 			blogList.setTitle(title);
 			blogList.setDate(date);
 			blogList.setImage(image);
@@ -55,11 +54,12 @@ public class BlogService {
 			return true;
 		}
 	}
-	//削除処理
+
+	// 削除処理
 	public boolean deleteBlog(Long blogId) {
-		if(blogId == null) {
+		if (blogId == null) {
 			return false;
-		}else {
+		} else {
 			blogDao.deleteById(blogId);
 			return true;
 		}

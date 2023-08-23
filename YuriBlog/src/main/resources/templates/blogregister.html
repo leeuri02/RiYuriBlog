@@ -37,29 +37,21 @@
                 
                 <form th:action="@{/blog/register/process}" method="post" enctype="multipart/form-data">
                     
-                    <div class="register-section-details">
-                        <div class="register-section-details_flex">
-                            <div>TITLE</div>
+                    <a class="message-bord">
+                            <p>TITLE</p>
                             <input type="text" name="title" value="">
-                        </div>
-                        <div class="register-section-details_flex">
-                            <div>date</div>
+                            <p>date</p>
                             <input type="date" name="date">
-                        </div>
-                        <div class="register-section-details_flex">
-                            <div>画像</div>
+                            <p>画像</p>
                             <input type="file" name="image">
-                        </div>
-                        <div class="register-section-details_flex">
-                            <div>投稿内容</div>
+                            <p>投稿内容</p>
                             <textarea name="contents"></textarea>
-                        </div>
+                           <button class="register">登録</button>
+                           <button class="back-btn" onclick="history.back();" type="button">戻る</button>
+                       
 
                     </div>
-                    <div class="register-section-details_flex">
-                        <button class="register">登録</button>
-                        <button class="back-btn" onclick="history.back();" type="button">戻る</button>
-                    </div>
+                    
                 </form>
             </div>
         </div>
